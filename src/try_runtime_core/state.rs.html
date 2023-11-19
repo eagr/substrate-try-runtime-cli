@@ -485,7 +485,7 @@
     </span>Live(LiveState),
 }
 
-<span class="doccomment">/// Options for [`to_ext`]
+<span class="doccomment">/// Options for [`State::to_ext`]
 ///
 /// Whether to check that the runtime was compiled with try-runtime feature
 </span><span class="attr">#[derive(PartialEq, PartialOrd)]
@@ -495,7 +495,7 @@
     <span class="doccomment">/// Don&#39;t check if the runtime was compiled with try-runtime feature
     </span>Skip,
 }
-<span class="doccomment">/// Options for [`to_ext`]
+<span class="doccomment">/// Options for [`State::to_ext`]
 ///
 /// Whether to check if the new runtime `spec_version` is greater than the previous runtime
 /// `spec_version`
@@ -514,7 +514,7 @@
     ///
     /// This will override the code as it sees fit based on [`Runtime`]. It will also check the
     /// spec-version and name.
-    </span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">async fn </span>to_ext&lt;Block: BlockT + DeserializeOwned, HostFns: HostFunctions&gt;(
+    </span><span class="kw">pub async fn </span>to_ext&lt;Block: BlockT + DeserializeOwned, HostFns: HostFunctions&gt;(
         <span class="kw-2">&amp;</span><span class="self">self</span>,
         shared: <span class="kw-2">&amp;</span>SharedParams,
         executor: <span class="kw-2">&amp;</span>WasmExecutor&lt;HostFns&gt;,
